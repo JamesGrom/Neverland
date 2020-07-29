@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6TX-7e-Ixh">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--EntryViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="EntryViewController" customClass="EntryViewController" customModule="Rocket_Turtle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueBackgroundWithCloud" translatesAutoresizingMaskIntoConstraints="NO" id="R8E-9D-Ds0" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AngledRocketTurtle" translatesAutoresizingMaskIntoConstraints="NO" id="NJT-tH-B3k">
+                                <rect key="frame" x="-94" y="183.5" width="563" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NJT-tH-B3k" secondAttribute="height" multiplier="15:8" id="uVc-Yz-cVe"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2E-Ae-o5I" userLabel="ButtonView">
+                                <rect key="frame" x="16" y="483.5" width="343" height="183.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwu-jD-4UO">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="68.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fwu-jD-4UO" secondAttribute="height" multiplier="10:2" id="HFg-rR-bf7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                        <state key="normal" backgroundImage="LoginPaintButton"/>
+                                        <connections>
+                                            <action selector="LoginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RuR-JG-dgi"/>
+                                            <segue destination="Mmd-zw-HZt" kind="show" identifier="EntryToLogin" id="12E-k5-eU7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPc-7C-xVw">
+                                        <rect key="frame" x="0.0" y="78.5" width="343" height="69"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                        <state key="normal" backgroundImage="RegisterPaintButton">
+                                            <color key="titleColor" red="0.97647058823529409" green="0.72156862745098038" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="RegisterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXM-wh-rOA"/>
+                                            <segue destination="Wl2-v0-USp" kind="show" id="oo2-sy-rMq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kPc-7C-xVw" firstAttribute="width" secondItem="fwu-jD-4UO" secondAttribute="width" id="2Eg-n5-4ER"/>
+                                    <constraint firstItem="kPc-7C-xVw" firstAttribute="height" secondItem="fwu-jD-4UO" secondAttribute="height" id="5tZ-GO-KdF"/>
+                                    <constraint firstItem="kPc-7C-xVw" firstAttribute="centerX" secondItem="T2E-Ae-o5I" secondAttribute="centerX" id="CRj-Tm-Fy4"/>
+                                    <constraint firstAttribute="trailing" secondItem="fwu-jD-4UO" secondAttribute="trailing" id="JSQ-Js-O14"/>
+                                    <constraint firstItem="kPc-7C-xVw" firstAttribute="top" secondItem="fwu-jD-4UO" secondAttribute="bottom" constant="10" id="UcG-PE-3Tj"/>
+                                    <constraint firstItem="fwu-jD-4UO" firstAttribute="top" secondItem="T2E-Ae-o5I" secondAttribute="top" id="fPK-Xx-zUt"/>
+                                    <constraint firstItem="fwu-jD-4UO" firstAttribute="leading" secondItem="T2E-Ae-o5I" secondAttribute="leading" id="fsZ-mY-AAb"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DarkBlueRTG title" translatesAutoresizingMaskIntoConstraints="NO" id="gTt-HE-xIZ">
+                                <rect key="frame" x="16" y="44" width="343" height="139.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NJT-tH-B3k" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.45" id="1E8-kt-b02"/>
+                            <constraint firstAttribute="bottom" secondItem="R8E-9D-Ds0" secondAttribute="bottom" id="5Iu-Dt-gda"/>
+                            <constraint firstItem="gTt-HE-xIZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8iK-F7-SQe"/>
+                            <constraint firstItem="NJT-tH-B3k" firstAttribute="top" secondItem="gTt-HE-xIZ" secondAttribute="bottom" id="9CN-eJ-ara"/>
+                            <constraint firstItem="R8E-9D-Ds0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ne6-h8-Ce3"/>
+                            <constraint firstItem="T2E-Ae-o5I" firstAttribute="centerX" secondItem="OAK-vp-ihz" secondAttribute="centerX" id="Qwt-Y4-9Xr"/>
+                            <constraint firstItem="gTt-HE-xIZ" firstAttribute="top" secondItem="OAK-vp-ihz" secondAttribute="top" id="S7Z-PF-ej6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T2E-Ae-o5I" secondAttribute="trailing" id="TJ7-O0-FIN"/>
+                            <constraint firstItem="NJT-tH-B3k" firstAttribute="centerX" secondItem="OAK-vp-ihz" secondAttribute="centerX" id="WOU-hc-XMb"/>
+                            <constraint firstItem="NJT-tH-B3k" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aRA-hJ-QBR"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="T2E-Ae-o5I" secondAttribute="bottom" id="b81-D4-pXH"/>
+                            <constraint firstItem="OAK-vp-ihz" firstAttribute="trailing" secondItem="R8E-9D-Ds0" secondAttribute="trailing" id="bCw-1k-XZ0"/>
+                            <constraint firstItem="T2E-Ae-o5I" firstAttribute="top" secondItem="NJT-tH-B3k" secondAttribute="bottom" id="j8H-ZM-ZV7"/>
+                            <constraint firstItem="gTt-HE-xIZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jTb-Y7-aGs"/>
+                            <constraint firstItem="T2E-Ae-o5I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oT2-iW-2jg"/>
+                            <constraint firstItem="R8E-9D-Ds0" firstAttribute="leading" secondItem="OAK-vp-ihz" secondAttribute="leading" id="zRZ-JD-sQk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OAK-vp-ihz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="60X-Zh-2jX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="QcV-3T-hyg" userLabel="GameNameViewComplete">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rocket Turtle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qJv-Ul-flh">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="63.5"/>
+                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Est. in 2020 SiliconValley" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4ZQ-Jy-hef">
+                            <rect key="frame" x="0.0" y="70.5" width="414" height="21.5"/>
+                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="qJv-Ul-flh" firstAttribute="leading" secondItem="QcV-3T-hyg" secondAttribute="leading" id="9CD-sS-1dn"/>
+                        <constraint firstItem="qJv-Ul-flh" firstAttribute="top" secondItem="QcV-3T-hyg" secondAttribute="top" id="Cqf-t3-KwJ"/>
+                        <constraint firstAttribute="trailing" secondItem="qJv-Ul-flh" secondAttribute="trailing" id="MI6-s0-a0z"/>
+                        <constraint firstItem="4ZQ-Jy-hef" firstAttribute="leading" secondItem="QcV-3T-hyg" secondAttribute="leading" id="WIb-6H-crW"/>
+                        <constraint firstItem="4ZQ-Jy-hef" firstAttribute="top" secondItem="qJv-Ul-flh" secondAttribute="bottom" constant="7" id="qfs-iN-Lfl"/>
+                        <constraint firstAttribute="trailing" secondItem="4ZQ-Jy-hef" secondAttribute="trailing" id="s0u-HZ-dop"/>
+                        <constraint firstAttribute="height" constant="100" id="wW8-hQ-d20"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="riN-v0-uEu"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--LoginScreen-->
+        <scene sceneID="E6o-pk-6Ki">
+            <objects>
+                <viewController id="Mmd-zw-HZt" userLabel="LoginScreen" customClass="LoginViewController" customModule="Rocket_Turtle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DPa-TU-SYa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueBackgroundWithCloud" translatesAutoresizingMaskIntoConstraints="NO" id="faP-Tz-rkI">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginPaintButton" translatesAutoresizingMaskIntoConstraints="NO" id="jka-9b-66Q">
+                                <rect key="frame" x="0.0" y="44" width="375" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jka-9b-66Q" secondAttribute="height" multiplier="207:64" id="zAD-gk-pGp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueProfilePic" translatesAutoresizingMaskIntoConstraints="NO" id="BOE-3m-SDN">
+                                <rect key="frame" x="0.0" y="160" width="375" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BOE-3m-SDN" secondAttribute="height" multiplier="20:8" id="7fd-yx-nbM"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0gy-ww-G6t">
+                                <rect key="frame" x="0.0" y="310" width="375" height="357"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jgrom@scu.edu" placeholder="Email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="BlackPaintSplatterButton" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RzS-IB-DDl">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="RzS-IB-DDl" secondAttribute="height" multiplier="10:2" id="pHv-zP-RBy"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Grahmhills17!" placeholder="Phone Number" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="BlackPaintSplatterButton" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="if6-gj-aTZ">
+                                        <rect key="frame" x="0.0" y="75" width="375" height="75"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="yes" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jp-ss-mcH">
+                                        <rect key="frame" x="56.5" y="150" width="262.5" height="75"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                        <state key="normal" title="Button" image="Enter Button"/>
+                                        <connections>
+                                            <action selector="EnterButtonPressed:" destination="Mmd-zw-HZt" eventType="touchUpInside" id="D9N-Lx-Fjy"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GK8-n5-9z0">
+                                        <rect key="frame" x="67.5" y="307" width="240" height="50"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="if6-gj-aTZ" firstAttribute="height" secondItem="RzS-IB-DDl" secondAttribute="height" id="DSF-0Z-BYQ"/>
+                                    <constraint firstItem="if6-gj-aTZ" firstAttribute="top" secondItem="RzS-IB-DDl" secondAttribute="bottom" id="Xo1-sn-HIp"/>
+                                    <constraint firstItem="RzS-IB-DDl" firstAttribute="top" secondItem="0gy-ww-G6t" secondAttribute="top" id="fsA-Bb-t4e"/>
+                                    <constraint firstItem="5jp-ss-mcH" firstAttribute="width" secondItem="if6-gj-aTZ" secondAttribute="width" multiplier="0.7" id="iI6-ki-fy3"/>
+                                    <constraint firstItem="if6-gj-aTZ" firstAttribute="width" secondItem="RzS-IB-DDl" secondAttribute="width" id="q6i-UT-Gxq"/>
+                                    <constraint firstItem="if6-gj-aTZ" firstAttribute="height" secondItem="5jp-ss-mcH" secondAttribute="height" id="sXH-Iu-BnN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5fi-L8-dLg" firstAttribute="trailing" secondItem="jka-9b-66Q" secondAttribute="trailing" id="704-Iv-hKv"/>
+                            <constraint firstItem="BOE-3m-SDN" firstAttribute="top" secondItem="jka-9b-66Q" secondAttribute="bottom" id="8v1-rg-hcI"/>
+                            <constraint firstItem="jka-9b-66Q" firstAttribute="centerX" secondItem="5fi-L8-dLg" secondAttribute="centerX" id="Elw-cu-gfl"/>
+                            <constraint firstItem="0gy-ww-G6t" firstAttribute="leading" secondItem="5fi-L8-dLg" secondAttribute="leading" id="Gyn-ya-vnr"/>
+                            <constraint firstItem="0gy-ww-G6t" firstAttribute="top" secondItem="BOE-3m-SDN" secondAttribute="bottom" id="HIn-Fh-tel"/>
+                            <constraint firstItem="jka-9b-66Q" firstAttribute="top" secondItem="5fi-L8-dLg" secondAttribute="top" id="HL0-BG-zVe"/>
+                            <constraint firstItem="5fi-L8-dLg" firstAttribute="bottom" secondItem="0gy-ww-G6t" secondAttribute="bottom" id="I45-Oj-hTr"/>
+                            <constraint firstItem="BOE-3m-SDN" firstAttribute="width" secondItem="BOE-3m-SDN" secondAttribute="height" multiplier="20:8" id="I4k-Dz-spl"/>
+                            <constraint firstAttribute="bottom" secondItem="faP-Tz-rkI" secondAttribute="bottom" id="Iml-OA-BdQ"/>
+                            <constraint firstItem="5fi-L8-dLg" firstAttribute="trailing" secondItem="faP-Tz-rkI" secondAttribute="trailing" id="JCk-cs-HTV"/>
+                            <constraint firstItem="5fi-L8-dLg" firstAttribute="trailing" secondItem="0gy-ww-G6t" secondAttribute="trailing" id="PYa-Ra-tLG"/>
+                            <constraint firstItem="jka-9b-66Q" firstAttribute="width" secondItem="jka-9b-66Q" secondAttribute="height" multiplier="207:64" id="QB1-Q9-WcD"/>
+                            <constraint firstItem="faP-Tz-rkI" firstAttribute="leading" secondItem="5fi-L8-dLg" secondAttribute="leading" id="bFD-Hx-3am"/>
+                            <constraint firstItem="BOE-3m-SDN" firstAttribute="trailing" secondItem="5fi-L8-dLg" secondAttribute="trailing" id="gVa-69-6BY"/>
+                            <constraint firstItem="jka-9b-66Q" firstAttribute="leading" secondItem="5fi-L8-dLg" secondAttribute="leading" id="vFi-vf-WyG"/>
+                            <constraint firstItem="BOE-3m-SDN" firstAttribute="leading" secondItem="5fi-L8-dLg" secondAttribute="leading" id="xns-DI-TV2"/>
+                            <constraint firstItem="faP-Tz-rkI" firstAttribute="top" secondItem="DPa-TU-SYa" secondAttribute="topMargin" id="zu4-BO-1rH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5fi-L8-dLg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fsc-el-ipk"/>
+                    <connections>
+                        <outlet property="EmailTextField" destination="RzS-IB-DDl" id="XPX-Xb-FTO"/>
+                        <outlet property="EnterButton" destination="5jp-ss-mcH" id="8i5-f1-tEs"/>
+                        <outlet property="PasswordTextField" destination="if6-gj-aTZ" id="u9t-Lf-eZu"/>
+                        <segue destination="HZF-c5-cNd" kind="show" identifier="LoginToHomeScreen" id="Nhr-eU-d3T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OmL-pY-XJ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2056" y="-304"/>
+        </scene>
+        <!--MessageKitViewController-->
+        <scene sceneID="MeL-Vh-iZd">
+            <objects>
+                <viewController id="VSN-ew-vB5" userLabel="MessageKitViewController" customClass="MessageKitViewController" customModule="Rocket_Turtle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OyG-tz-q74">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BIE-I1-B5b">
+                                <rect key="frame" x="0.0" y="78" width="375" height="540"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start New Conversation With:" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5jI-NH-uiZ">
+                                <rect key="frame" x="0.0" y="44" width="329" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="dNR-mG-URd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iR-r2-fjd">
+                                <rect key="frame" x="329" y="44" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JvR-Qy-MyD"/>
+                                    <constraint firstAttribute="width" constant="46" id="haK-qt-gd8"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="newMessageButtonPressed:" destination="VSN-ew-vB5" eventType="touchUpInside" id="OPu-tJ-54W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3iR-r2-fjd" firstAttribute="top" secondItem="xpC-aA-hko" secondAttribute="top" id="69o-fo-SW0"/>
+                            <constraint firstItem="xpC-aA-hko" firstAttribute="trailing" secondItem="BIE-I1-B5b" secondAttribute="trailing" id="Cf0-sZ-zya"/>
+                            <constraint firstItem="3iR-r2-fjd" firstAttribute="trailing" secondItem="xpC-aA-hko" secondAttribute="trailing" id="Efc-9s-EPf"/>
+                            <constraint firstItem="xpC-aA-hko" firstAttribute="bottom" secondItem="BIE-I1-B5b" secondAttribute="bottom" id="J5u-6J-MEJ"/>
+                            <constraint firstItem="3iR-r2-fjd" firstAttribute="leading" secondItem="5jI-NH-uiZ" secondAttribute="trailing" id="OgH-ZC-C90"/>
+                            <constraint firstItem="5jI-NH-uiZ" firstAttribute="leading" secondItem="xpC-aA-hko" secondAttribute="leading" id="UI9-mD-7LL"/>
+                            <constraint firstItem="BIE-I1-B5b" firstAttribute="top" secondItem="5jI-NH-uiZ" secondAttribute="bottom" id="aEu-es-BlP"/>
+                            <constraint firstItem="BIE-I1-B5b" firstAttribute="leading" secondItem="xpC-aA-hko" secondAttribute="leading" id="iWb-jb-1Qi"/>
+                            <constraint firstItem="5jI-NH-uiZ" firstAttribute="top" secondItem="xpC-aA-hko" secondAttribute="top" id="p9x-cV-qRZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xpC-aA-hko"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Messages" id="9M0-lq-Rbv"/>
+                    <connections>
+                        <outlet property="myTabelView" destination="BIE-I1-B5b" id="wwK-Fd-IV9"/>
+                        <outlet property="newMessageTextField" destination="5jI-NH-uiZ" id="TQT-Bo-z4e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3Z-Vt-qUC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7260" y="1895"/>
+        </scene>
+        <!--CompleteRegistrationViewController-->
+        <scene sceneID="AOF-e7-NAN">
+            <objects>
+                <viewController id="Wl2-v0-USp" userLabel="CompleteRegistrationViewController" customClass="RegistrationViewController" customModule="Rocket_Turtle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j3X-dc-Vhf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aH-eC-UDQ">
+                                <rect key="frame" x="0.0" y="44" width="375" height="756"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueBackgroundWithCloud" translatesAutoresizingMaskIntoConstraints="NO" id="WSb-kA-UwL">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1024"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3Z9-CY-j1V">
+                                        <rect key="frame" x="15" y="258" width="345" height="450"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Please Wait" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfN-dy-3ao" userLabel="LoadingIndicatorLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="12"/>
+                                                <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xsp-S4-juq">
+                                                <rect key="frame" x="0.0" y="41" width="345" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name:   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXp-J0-j6J" userLabel="First NameLabel">
+                                                        <rect key="frame" x="0.0" y="9.5" width="136" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5Rv-jy-VvE">
+                                                        <rect key="frame" x="136" y="3.5" width="209" height="34"/>
+                                                        <color key="backgroundColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
+                                                        <connections>
+                                                            <action selector="FirstNameTextfieldDidEndEditing:" destination="Wl2-v0-USp" eventType="editingDidEnd" id="QcW-GY-EhJ"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Alx-hX-RKl">
+                                                <rect key="frame" x="0.0" y="82" width="345" height="40.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name:   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo4-xe-306" userLabel="LastNameLabel">
+                                                        <rect key="frame" x="0.0" y="9.5" width="130" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter last Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sNv-Gp-tq2">
+                                                        <rect key="frame" x="130" y="3.5" width="215" height="34"/>
+                                                        <color key="backgroundColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                        <connections>
+                                                            <action selector="LastNameTextFieldDidEndEditing:" destination="Wl2-v0-USp" eventType="editingDidEnd" id="uPz-lR-vnK"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="syr-LC-RDL">
+                                                <rect key="frame" x="0.0" y="122.5" width="345" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7Q-Yy-wFK" userLabel="First NameLabel">
+                                                        <rect key="frame" x="0.0" y="10" width="151" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2345678910" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="f0B-Yh-ZML">
+                                                        <rect key="frame" x="151" y="3.5" width="194" height="34"/>
+                                                        <color key="backgroundColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <connections>
+                                                            <action selector="PhoneNumberTextFieldDidEndEditing:" destination="Wl2-v0-USp" eventType="editingDidEnd" id="cmg-gf-1DW"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7wv-M9-lro">
+                                                <rect key="frame" x="0.0" y="163.5" width="345" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:      " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGL-lB-VX1" userLabel="First NameLabel">
+                                                        <rect key="frame" x="0.0" y="10" width="113" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username@email.com" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kwR-hk-rBT">
+                                                        <rect key="frame" x="113" y="3.5" width="232" height="34"/>
+                                                        <color key="backgroundColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
+                                                        <connections>
+                                                            <action selector="EmailTextfieldDidEndEditing:" destination="Wl2-v0-USp" eventType="editingDidEnd" id="e7l-jo-VYc"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JBe-qS-8RS">
+                                                <rect key="frame" x="0.0" y="204.5" width="345" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwZ-Mq-nKq" userLabel="First NameLabel">
+                                                        <rect key="frame" x="0.0" y="10" width="111.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Must have 1 number &amp; symbol" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="w4F-GA-ZWQ">
+                                                        <rect key="frame" x="111.5" y="3.5" width="233.5" height="34"/>
+                                                        <color key="backgroundColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="12"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                        <connections>
+                                                            <action selector="PasswordTextFieldDidEndEditing:" destination="Wl2-v0-USp" eventType="editingDidEnd" id="DTm-qM-P4v"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Iee-uy-czg">
+                                                <rect key="frame" x="0.0" y="245.5" width="345" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Age:          " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-x0-WWP" userLabel="AgeLabel">
+                                                        <rect key="frame" x="0.0" y="9.5" width="125.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2O5-dV-iYI">
+                                                        <rect key="frame" x="125.5" y="0.0" width="219.5" height="41"/>
+                                                        <color key="tintColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LgX-JB-eTl">
+                                                <rect key="frame" x="0.0" y="286.5" width="345" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName:   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8G-VK-Uwr" userLabel="UserNameLabel">
+                                                        <rect key="frame" x="0.0" y="9.5" width="122.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0x-zB-z9b">
+                                                        <rect key="frame" x="122.5" y="0.0" width="222.5" height="41"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FL-KF-Fkk" userLabel="ErrorMessageLabel">
+                                                <rect key="frame" x="0.0" y="327.5" width="345" height="40.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="12"/>
+                                                <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UeW-iH-nLn">
+                                                <rect key="frame" x="0.0" y="368" width="345" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMS Code:        " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwY-1q-8DS" userLabel="SMS code label">
+                                                        <rect key="frame" x="0.0" y="10" width="164" height="21.5"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="text code" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ud6-lw-OzJ">
+                                                        <rect key="frame" x="164" y="3.5" width="181" height="34"/>
+                                                        <color key="backgroundColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
+                                                        <connections>
+                                                            <action selector="SMStextFieldDidEndEditing:" destination="Wl2-v0-USp" eventType="editingDidEnd" id="7HC-Wc-KBd"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bmV-C1-KeA">
+                                                <rect key="frame" x="0.0" y="409" width="345" height="41"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4s-2Q-bQX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="41"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="f1m-RB-wfI"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBO-D9-HcT">
+                                                        <rect key="frame" x="70" y="0.0" width="205" height="41"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                        <state key="normal" title="Create Account" backgroundImage="CompactSplatterButton">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="CreateAccountButtonPressed:" destination="Wl2-v0-USp" eventType="touchUpInside" id="hvx-gU-jPW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQt-fT-QdY">
+                                                        <rect key="frame" x="275" y="0.0" width="70" height="41"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="lKr-aw-tv7"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="450" id="YRE-S2-H1l"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk8-wH-4d7">
+                                        <rect key="frame" x="103" y="228" width="169" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="vcK-fa-jls"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                        <state key="normal" title="^ Add Profile Pic">
+                                            <color key="titleColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CreateAnAccount" translatesAutoresizingMaskIntoConstraints="NO" id="fzQ-2U-TjN">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="dTv-xA-iby"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJd-VR-PoU" userLabel="ProfilePicBoarderView">
+                                        <rect key="frame" x="116" y="92.5" width="143" height="143"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueProfilePic" translatesAutoresizingMaskIntoConstraints="NO" id="8gb-hh-DSq">
+                                        <rect key="frame" x="123.5" y="100" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="Pkk-3n-8oK"/>
+                                            <constraint firstAttribute="height" constant="128" id="kgd-LJ-Wg0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJg-e2-UW3">
+                                        <rect key="frame" x="131.5" y="104" width="112" height="120"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                        <state key="normal" title="Touch Here"/>
+                                        <connections>
+                                            <action selector="AddProfilePicButtonPressed:" destination="Wl2-v0-USp" eventType="touchUpInside" id="a6Z-Vh-SyS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi There :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhS-yb-xcX">
+                                        <rect key="frame" x="137.5" y="994.5" width="100" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3Z9-CY-j1V" secondAttribute="trailing" constant="15" id="52n-Ax-R4o"/>
+                                    <constraint firstItem="RJg-e2-UW3" firstAttribute="height" secondItem="8gb-hh-DSq" secondAttribute="height" multiplier="0.9375" id="6pZ-lX-D61"/>
+                                    <constraint firstItem="cJd-VR-PoU" firstAttribute="bottom" secondItem="8gb-hh-DSq" secondAttribute="bottom" constant="7.5" id="DZ9-mV-i8s"/>
+                                    <constraint firstItem="3Z9-CY-j1V" firstAttribute="top" secondItem="bk8-wH-4d7" secondAttribute="bottom" id="Fn7-EK-gW3"/>
+                                    <constraint firstItem="WSb-kA-UwL" firstAttribute="height" secondItem="2aH-eC-UDQ" secondAttribute="height" priority="250" id="GZj-u9-jZa"/>
+                                    <constraint firstAttribute="bottom" secondItem="WSb-kA-UwL" secondAttribute="bottom" id="K79-GH-0yr"/>
+                                    <constraint firstAttribute="trailing" secondItem="WSb-kA-UwL" secondAttribute="trailing" id="Ooe-dP-97Y"/>
+                                    <constraint firstItem="WSb-kA-UwL" firstAttribute="leading" secondItem="2aH-eC-UDQ" secondAttribute="leading" id="Rvk-pM-qns"/>
+                                    <constraint firstItem="3Z9-CY-j1V" firstAttribute="leading" secondItem="2aH-eC-UDQ" secondAttribute="leading" constant="15" id="WVf-G3-MAy"/>
+                                    <constraint firstItem="bk8-wH-4d7" firstAttribute="top" secondItem="8gb-hh-DSq" secondAttribute="bottom" id="Wcj-dt-OZO"/>
+                                    <constraint firstItem="cJd-VR-PoU" firstAttribute="leading" secondItem="8gb-hh-DSq" secondAttribute="leading" constant="-7.5" id="XTq-NS-tFd"/>
+                                    <constraint firstAttribute="trailing" secondItem="fzQ-2U-TjN" secondAttribute="trailing" id="YXR-WI-p8Q"/>
+                                    <constraint firstItem="RJg-e2-UW3" firstAttribute="centerX" secondItem="8gb-hh-DSq" secondAttribute="centerX" id="Yh3-RW-6zo"/>
+                                    <constraint firstItem="fzQ-2U-TjN" firstAttribute="top" secondItem="2aH-eC-UDQ" secondAttribute="top" id="ZAe-EA-w6e"/>
+                                    <constraint firstItem="RJg-e2-UW3" firstAttribute="width" secondItem="8gb-hh-DSq" secondAttribute="width" multiplier="0.875" id="a2g-cW-NRH"/>
+                                    <constraint firstItem="RJg-e2-UW3" firstAttribute="centerY" secondItem="8gb-hh-DSq" secondAttribute="centerY" id="asO-e1-uQy"/>
+                                    <constraint firstItem="fzQ-2U-TjN" firstAttribute="leading" secondItem="2aH-eC-UDQ" secondAttribute="leading" id="bRb-7g-Lb1"/>
+                                    <constraint firstItem="GhS-yb-xcX" firstAttribute="centerX" secondItem="2aH-eC-UDQ" secondAttribute="centerX" id="bTF-Ba-4kd"/>
+                                    <constraint firstItem="WSb-kA-UwL" firstAttribute="top" secondItem="2aH-eC-UDQ" secondAttribute="top" id="fw5-mI-IrD"/>
+                                    <constraint firstItem="WSb-kA-UwL" firstAttribute="width" secondItem="2aH-eC-UDQ" secondAttribute="width" id="gwI-Fz-KwU"/>
+                                    <constraint firstItem="MHi-3k-9Ej" firstAttribute="bottom" secondItem="GhS-yb-xcX" secondAttribute="bottom" constant="8" id="j8w-z5-otY"/>
+                                    <constraint firstItem="8gb-hh-DSq" firstAttribute="top" secondItem="fzQ-2U-TjN" secondAttribute="bottom" id="mey-tL-LDa"/>
+                                    <constraint firstItem="8gb-hh-DSq" firstAttribute="centerX" secondItem="2aH-eC-UDQ" secondAttribute="centerX" id="rBm-Oh-3kf"/>
+                                    <constraint firstItem="bk8-wH-4d7" firstAttribute="centerX" secondItem="8gb-hh-DSq" secondAttribute="centerX" id="tBg-4l-TCb"/>
+                                    <constraint firstItem="cJd-VR-PoU" firstAttribute="top" secondItem="8gb-hh-DSq" secondAttribute="top" constant="-7.5" id="z0b-NI-JHy"/>
+                                    <constraint firstItem="cJd-VR-PoU" firstAttribute="trailing" secondItem="8gb-hh-DSq" secondAttribute="trailing" constant="7.5" id="zX5-zm-zuK"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="MHi-3k-9Ej"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="URr-hz-I3b"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2aH-eC-UDQ" firstAttribute="trailing" secondItem="azb-Zr-mJZ" secondAttribute="trailing" id="C0u-cu-IKS"/>
+                            <constraint firstItem="2aH-eC-UDQ" firstAttribute="top" secondItem="azb-Zr-mJZ" secondAttribute="top" id="fiU-dL-7RR"/>
+                            <constraint firstItem="2aH-eC-UDQ" firstAttribute="bottom" secondItem="azb-Zr-mJZ" secondAttribute="bottom" id="nF6-WS-uYG"/>
+                            <constraint firstItem="2aH-eC-UDQ" firstAttribute="leading" secondItem="azb-Zr-mJZ" secondAttribute="leading" id="u0S-q1-267"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="azb-Zr-mJZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Crr-r0-TpJ"/>
+                    <size key="freeformSize" width="375" height="800"/>
+                    <connections>
+                        <outlet property="AddProfilePicButton" destination="RJg-e2-UW3" id="kx9-Xl-toZ"/>
+                        <outlet property="AgePickerView" destination="2O5-dV-iYI" id="HD6-Tf-d5b"/>
+                        <outlet property="CreateAccountButton" destination="EBO-D9-HcT" id="4Ct-wJ-2Ag"/>
+                        <outlet property="EmailTextField" destination="kwR-hk-rBT" id="04S-vt-FkD"/>
+                        <outlet property="ErrorMessageLabel" destination="2FL-KF-Fkk" id="Srx-Se-urH"/>
+                        <outlet property="FirstNameTextField" destination="5Rv-jy-VvE" id="qFs-pj-Owu"/>
+                        <outlet property="LastNameTextField" destination="sNv-Gp-tq2" id="4wX-Ba-ufr"/>
+                        <outlet property="LoadingIndicatorLabel" destination="vfN-dy-3ao" id="5HA-NY-h4Z"/>
+                        <outlet property="PasswordTextField" destination="w4F-GA-ZWQ" id="a0d-uv-CF8"/>
+                        <outlet property="PhoneNumberTextField" destination="f0B-Yh-ZML" id="MvN-20-fw2"/>
+                        <outlet property="ProfilePicBoarderview" destination="cJd-VR-PoU" id="nLe-ct-63y"/>
+                        <outlet property="ProfilePicture" destination="8gb-hh-DSq" id="9lE-sD-aO4"/>
+                        <outlet property="SMSStackView" destination="UeW-iH-nLn" id="we6-zA-t8i"/>
+                        <outlet property="SMSTextField" destination="ud6-lw-OzJ" id="hqM-U1-5cb"/>
+                        <outlet property="UserNameLabel" destination="S0x-zB-z9b" id="vsa-dM-Vbe"/>
+                        <outlet property="addProfilePicLabelButton" destination="bk8-wH-4d7" id="e4p-6E-au4"/>
+                        <segue destination="HZF-c5-cNd" kind="show" identifier="RegistrationToHomeScreen" id="YYV-ay-7JS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Snv-Hi-ioI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2055" y="525"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fcC-Vh-hJ6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6TX-7e-Ixh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="cNo-oR-SKw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IWP-3a-02q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pRB-tM-HQs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LgZ-Pc-FVZ">
+            <objects>
+                <tabBarController id="HZF-c5-cNd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Soq-kd-7cQ"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LTi-Tb-Bxc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eD0-Mp-iW1" kind="relationship" relationship="viewControllers" id="M8a-AX-eZz"/>
+                        <segue destination="djE-F0-Ftx" kind="relationship" relationship="viewControllers" id="tfR-lT-xYC"/>
+                        <segue destination="Veh-yM-H2i" kind="relationship" relationship="viewControllers" id="bA8-cx-9Vf"/>
+                        <segue destination="br3-1G-33A" kind="relationship" relationship="viewControllers" id="OMM-ax-xR8"/>
+                        <segue destination="5wm-jW-z7R" kind="relationship" relationship="viewControllers" id="MSA-wv-wUk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R6D-vi-YwB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5116" y="138"/>
+        </scene>
+        <!--GlobalArenaNavController-->
+        <scene sceneID="AZG-j8-H4X">
+            <objects>
+                <navigationController id="eD0-Mp-iW1" userLabel="GlobalArenaNavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Global Arena" image="person.3" catalog="system" selectedImage="person.3.fill" id="9n4-Dp-ZCN"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7ks-4J-Ba8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                            <color key="textColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BGR-Z3-eE1" kind="relationship" relationship="rootViewController" id="ueQ-1Z-3gU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mai-3d-vnx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3257" y="1083"/>
+        </scene>
+        <!--GlobalArenaRootVC-->
+        <scene sceneID="dxB-KK-08o">
+            <objects>
+                <viewController id="BGR-Z3-eE1" userLabel="GlobalArenaRootVC" customClass="GlobalMapViewController" customModule="Rocket_Turtle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ha1-eP-Dq2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1ia-5y-Vrc" userLabel="toggleViewBackground">
+                                <rect key="frame" x="319" y="58.5" width="42" height="41"/>
+                                <color key="tintColor" red="0.1960784314" green="0.50980392159999999" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVu-9c-VMV">
+                                <rect key="frame" x="305" y="44" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="iVZ-xt-LWZ"/>
+                                    <constraint firstAttribute="width" constant="70" id="zK6-WG-t0N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="10"/>
+                                <color key="tintColor" red="0.48627450980392156" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="location.north.line.fill" catalog="system">
+                                    <color key="titleColor" red="0.1960784314" green="0.50980392159999999" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleViewTypeButtonPressed:" destination="BGR-Z3-eE1" eventType="touchUpInside" id="gvq-3k-dZR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="rYW-5J-hts" userLabel="viewTypeLabel">
+                                <rect key="frame" x="307" y="114" width="66" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="10"/>
+                                <color key="textColor" red="0.1960784314" green="0.50980392159999999" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EM2-Hp-aQp" userLabel="refreshButtonBackground">
+                                <rect key="frame" x="14" y="58.5" width="42" height="41"/>
+                                <color key="tintColor" red="0.1960784314" green="0.50980392159999999" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Utf-5c-htG" userLabel="refreshButton">
+                                <rect key="frame" x="0.0" y="44" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="6Pj-8v-HeT"/>
+                                    <constraint firstAttribute="width" constant="70" id="eFc-B3-wDy"/>
+                                </constraints>
+                                <color key="tintColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="arrow.clockwise" catalog="system"/>
+                                <connections>
+                                    <action selector="refreshButtonPressed:" destination="BGR-Z3-eE1" eventType="touchUpInside" id="pb2-F9-5O5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Color"/>
+                        <constraints>
+                            <constraint firstItem="EM2-Hp-aQp" firstAttribute="width" secondItem="Utf-5c-htG" secondAttribute="width" multiplier="0.6" id="1MC-gv-uzM"/>
+                            <constraint firstItem="Utf-5c-htG" firstAttribute="leading" secondItem="d4b-P4-Xdz" secondAttribute="leading" id="ABO-YA-AaU"/>
+                            <constraint firstItem="EM2-Hp-aQp" firstAttribute="height" secondItem="Utf-5c-htG" secondAttribute="height" multiplier="0.6" id="CBB-67-iej"/>
+                            <constraint firstItem="rYW-5J-hts" firstAttribute="width" secondItem="vVu-9c-VMV" secondAttribute="width" multiplier="0.942857" id="Jks-al-x50"/>
+                            <constraint firstItem="EM2-Hp-aQp" firstAttribute="centerX" secondItem="Utf-5c-htG" secondAttribute="centerX" id="KIm-Av-CEE"/>
+                            <constraint firstItem="1ia-5y-Vrc" firstAttribute="centerY" secondItem="vVu-9c-VMV" secondAttribute="centerY" id="OuL-Na-qLr"/>
+                            <constraint firstItem="1ia-5y-Vrc" firstAttribute="width" secondItem="vVu-9c-VMV" secondAttribute="width" multiplier="0.6" id="PQQ-Bf-aPk"/>
+                            <constraint firstItem="1ia-5y-Vrc" firstAttribute="centerX" secondItem="vVu-9c-VMV" secondAttribute="centerX" id="Ule-kM-LGn"/>
+                            <constraint firstItem="rYW-5J-hts" firstAttribute="centerX" secondItem="vVu-9c-VMV" secondAttribute="centerX" id="XlR-74-Zo9"/>
+                            <constraint firstItem="vVu-9c-VMV" firstAttribute="trailing" secondItem="d4b-P4-Xdz" secondAttribute="trailing" id="Yud-Ro-OFs"/>
+                            <constraint firstItem="Utf-5c-htG" firstAttribute="top" secondItem="d4b-P4-Xdz" secondAttribute="top" id="bl5-wH-rW7"/>
+                            <constraint firstItem="rYW-5J-hts" firstAttribute="bottom" secondItem="vVu-9c-VMV" secondAttribute="bottom" id="dgQ-4N-e2g"/>
+                            <constraint firstItem="EM2-Hp-aQp" firstAttribute="centerY" secondItem="Utf-5c-htG" secondAttribute="centerY" id="ejq-Lc-zmi"/>
+                            <constraint firstItem="vVu-9c-VMV" firstAttribute="top" secondItem="d4b-P4-Xdz" secondAttribute="top" id="nzt-Zv-6Pw"/>
+                            <constraint firstItem="1ia-5y-Vrc" firstAttribute="height" secondItem="vVu-9c-VMV" secondAttribute="height" multiplier="0.6" id="yfh-NK-65s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d4b-P4-Xdz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Global Arena" id="KUw-AS-YK3"/>
+                    <connections>
+                        <outlet property="ToggleViewTypeButton" destination="vVu-9c-VMV" id="dbl-S4-Zdz"/>
+                        <outlet property="refreshButton" destination="Utf-5c-htG" id="qxm-AL-Iwz"/>
+                        <outlet property="refreshButtonBackground" destination="EM2-Hp-aQp" id="4Mi-u8-YJz"/>
+                        <outlet property="toggleViewButtonBackground" destination="1ia-5y-Vrc" id="kGd-Kq-r2T"/>
+                        <outlet property="viewTypeLabel" destination="rYW-5J-hts" id="Csg-5q-Nre"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tc6-ET-2sy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3257" y="1895"/>
+        </scene>
+        <!--LocalArenaRootVC-->
+        <scene sceneID="pun-q5-tR6">
+            <objects>
+                <viewController id="gvf-Mf-Al3" userLabel="LocalArenaRootVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GFS-Jw-Q0d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="kQM-VQ-zFc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Local Arena" id="GGo-MR-6vA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VfT-bq-AHy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4113" y="1895"/>
+        </scene>
+        <!--AccountRootVC-->
+        <scene sceneID="uS0-Tu-4cD">
+            <objects>
+                <viewController id="1Rx-wf-EbW" userLabel="AccountRootVC" customClass="AccountViewController" customModule="Rocket_Turtle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OrE-iJ-5YE" userLabel="AccountRootVC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCt-yM-B1f">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <state key="normal" title="Create Challenge"/>
+                                <connections>
+                                    <action selector="createChallengePressed:" destination="1Rx-wf-EbW" eventType="touchUpInside" id="hma-i5-F5N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yCt-yM-B1f" firstAttribute="centerX" secondItem="OrE-iJ-5YE" secondAttribute="centerX" id="7or-u1-h03"/>
+                            <constraint firstItem="yCt-yM-B1f" firstAttribute="leading" secondItem="qKe-Ft-jAC" secondAttribute="leading" constant="164" id="9C1-jS-rGF"/>
+                            <constraint firstItem="yCt-yM-B1f" firstAttribute="top" secondItem="qKe-Ft-jAC" secondAttribute="top" constant="274" id="Jou-yJ-ajR"/>
+                            <constraint firstItem="yCt-yM-B1f" firstAttribute="centerY" secondItem="OrE-iJ-5YE" secondAttribute="centerY" id="Wmx-NW-0ZX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qKe-Ft-jAC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Account" id="2jt-ic-tdD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cpc-mD-Dxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5116" y="1697"/>
+        </scene>
+        <!--FeedRootVC-->
+        <scene sceneID="XU4-rv-NIf">
+            <objects>
+                <viewController id="XQa-iJ-yXp" userLabel="FeedRootVC" customClass="FeedViewController" customModule="Rocket_Turtle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B4Y-VD-zQi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="V9d-Ob-UhP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Feed" id="0qx-EE-GmV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XTt-hI-RKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6165.6000000000004" y="1894.9025487256374"/>
+        </scene>
+        <!--LocalArenaNavController-->
+        <scene sceneID="Tph-oc-6gk">
+            <objects>
+                <navigationController id="djE-F0-Ftx" userLabel="LocalArenaNavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Local Arena" image="person.2" catalog="system" selectedImage="person.2.fill" id="y5Y-Rh-kWo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y0B-3e-Nqi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                            <color key="textColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gvf-Mf-Al3" kind="relationship" relationship="rootViewController" id="Xdj-sY-JuV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UCt-6R-UN9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4113" y="1083"/>
+        </scene>
+        <!--FeedNavController-->
+        <scene sceneID="ERL-En-bGD">
+            <objects>
+                <navigationController id="br3-1G-33A" userLabel="FeedNavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" image="flame" catalog="system" selectedImage="flame.fill" id="zWG-Dy-8rN">
+                        <color key="badgeColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JXU-Rm-Vez">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                            <color key="textColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XQa-iJ-yXp" kind="relationship" relationship="rootViewController" id="J8x-lC-QbB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcm-ft-JRb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6167" y="1083"/>
+        </scene>
+        <!--AccountHomeNavController-->
+        <scene sceneID="GBT-xz-ehW">
+            <objects>
+                <navigationController title="AccountHomeViewController" id="Veh-yM-H2i" userLabel="AccountHomeNavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Me" image="person.circle" catalog="system" selectedImage="person.circle.fill" id="DU2-Ht-r15"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xJp-nt-CRb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                            <color key="textColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1Rx-wf-EbW" kind="relationship" relationship="rootViewController" id="BE9-nS-m7j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JXs-2G-Kqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5116" y="893"/>
+        </scene>
+        <!--MessagesNavController-->
+        <scene sceneID="CYb-G4-K4u">
+            <objects>
+                <navigationController id="5wm-jW-z7R" userLabel="MessagesNavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Messages" image="message" catalog="system" selectedImage="message.fill" id="pyJ-bV-K8J">
+                        <color key="badgeColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gBi-j1-o9S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.058823529409999999" green="0.29803921570000003" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                            <color key="textColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VSN-ew-vB5" kind="relationship" relationship="rootViewController" id="rgd-tZ-ngM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c7H-Br-fkC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7260" y="1083"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YYV-ay-7JS"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.48648772959999997" green="0.85434391919999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="AngledRocketTurtle" width="1024" height="1024"/>
+        <image name="BlackPaintSplatterButton" width="2000" height="400"/>
+        <image name="BlueProfilePic" width="1024" height="1024"/>
+        <image name="CompactSplatterButton" width="1024" height="350"/>
+        <image name="CreateAnAccount" width="2000" height="400"/>
+        <image name="DarkBlueRTG title" width="1024" height="400"/>
+        <image name="Enter Button" width="1024" height="350"/>
+        <image name="LoginPaintButton" width="2000" height="400"/>
+        <image name="RegisterPaintButton" width="2000" height="400"/>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="blueBackgroundWithCloud" width="1024" height="1024"/>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <image name="flame" catalog="system" width="109" height="128"/>
+        <image name="flame.fill" catalog="system" width="109" height="128"/>
+        <image name="location.north.line.fill" catalog="system" width="82" height="128"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="person.2" catalog="system" width="128" height="81"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

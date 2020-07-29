@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>169098248799-im3sejf30hfv12q3np523v2mobgm47t0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.169098248799-im3sejf30hfv12q3np523v2mobgm47t0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAcDHgW6dI_1SobYAtWW8RFYLrB-6MFL_U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>169098248799</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>co.rocketturtle.Rocket-Turtle</string>
+	<key>PROJECT_ID</key>
+	<string>rocketturtle-2d7d9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rocketturtle-2d7d9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:169098248799:ios:0528b3fad57b732fef11ea</string>
+	<key>DATABASE_URL</key>
+	<string>https://rocketturtle-2d7d9.firebaseio.com</string>
+</dict>
+</plist>
